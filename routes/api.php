@@ -27,12 +27,12 @@ Route::prefix('auth')->middleware('api')->controller(AuthController::class)->gro
     Route::post('me', 'me');
 });
 
-Route::group(['namespace' => 'App\Http\Controllers'], function () {
+Route::group(['namespace' => 'App\Http\Controllers\Users'], function () {
 
     Route::group(['namespace' => 'Product', 'prefix' => 'product'], function () {
 
         Route::post('/index', 'IndexController')->name('product.index');
-        Route::post('/main', 'MainController')->name('product.main');
+        Route::get('/main', 'MainController')->name('product.main');
         Route::post('/create', 'CreateController')->name('product.create');
         Route::post('/add', 'StoreController')->name('product.store');
         Route::post('/id', 'ShowController')->name('product.show');
@@ -47,8 +47,9 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
     });
 
     Route::group(['namespace' => 'Category', 'prefix' => 'category'], function () {
-        Route::post('/index', 'IndexController')->name('category.index');
+        Route::get('/index', 'IndexController')->name('category.index');
         Route::post('/id', 'ShowController')->name('category.show');
         Route::post('/parent', 'ParentController')->name('category.parent');
     });
+
 });

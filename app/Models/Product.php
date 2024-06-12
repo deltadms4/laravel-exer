@@ -5,13 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class Product extends Model
 {
     use HasFactory;
 
+
     protected $table = 'products';
 
     protected $guarded = false;
+
+    //protected $fillable = ['video'];
+
+    protected $casts = ['image' => 'array', 'video' => 'array'];
 
     public function category()
     {

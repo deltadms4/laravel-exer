@@ -14,6 +14,7 @@ class ShowController extends BaseController
     {
         $data = $request->input();
         $product = Product::find($data['id']);
-        return new ProductResource($product);
+        //return new ProductResource($product);
+        return $product;
     }
 }

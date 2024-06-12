@@ -17,6 +17,6 @@ class StoreController extends BaseController
 
         $product = $this->service->store($data);
 
-        return new ProductResource($product);
+        return $product;
     }
 }

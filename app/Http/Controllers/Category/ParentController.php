@@ -12,7 +12,7 @@ class ParentController extends BaseController
     {
         $data = $request->input();
 
-        $daughter_category = Category::where('parent_id', $data['id'])->get();
+        $daughter_category = Category::where('parent_id', $data['parent_id'])->get();
 
         return CategoryResouce::collection($daughter_category);
     }

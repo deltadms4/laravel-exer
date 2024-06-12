@@ -14,14 +14,14 @@ class User extends Authenticatable implements JWTSubject
     use HasApiTokens, HasFactory, Notifiable;
     protected $table = "users";
 
-    const ROLE_ADMIN = 1;
-    const ROLE_USER = 0;
+    const ROLE_ADMIN = 'admin';
+    const ROLE_USER = 'user';
 
     public static function getRoles()
     {
         return [
-            self::ROLE_ADMIN => 'Admin',
-            self::ROLE_USER => 'User'
+            self::ROLE_ADMIN => 'admin',
+            self::ROLE_USER => 'user'
         ];
     }
     /**

@@ -16,6 +16,12 @@
 
                     {{ __('You are logged in!') }}
                 </div>
+                <li class="nav-item">
+                    <form action="{{route('logout')}}" method="post">
+                        @csrf
+                        <input class="btn btn-outline-danger" type="submit" value="Выйти">
+                    </form>
+                </li>
             </div>
         </div>
     </div>

@@ -13,8 +13,7 @@ class MainController extends Controller
         {
             $last_products = Product::withCount('id')->orderBy('id', 'DESC')->get()->take(12);
 
-            return ProductResource::collection($last_products);
+            return $last_products;
         }
-
 
 }

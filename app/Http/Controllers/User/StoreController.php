@@ -14,7 +14,7 @@ class StoreController extends BaseController
 {
     public function __invoke(StoreRequest $request) {
 
-        $data = $request->validated();
+       $data = $request->validated();
         $data['password'] = Hash::make($data['password']);
         $user = $this->service->store($data);
 
