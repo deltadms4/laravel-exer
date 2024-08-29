@@ -13,7 +13,10 @@ class EditController extends Controller
         $users_count = User::all()->count();
         $products_count = Product::all()->count();
         $categories_count = Category::all()->count();
+        $categories = Category::all();
+        $parent_category = Category::where('id', $category->parent_id)->get();
 
-        return view('admin.category.edit', compact('category', 'users_count', 'products_count', 'categories_count'));
+
+        return view('admin.category.edit', compact('category', 'categories','parent_category','users_count', 'products_count', 'categories_count'));
     }
 }

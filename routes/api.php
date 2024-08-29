@@ -32,7 +32,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Users'], function () {
     Route::group(['namespace' => 'Product', 'prefix' => 'product'], function () {
 
         Route::post('/index', 'IndexController')->name('product.index');
-        Route::get('/main', 'MainController')->name('product.main');
+        Route::post('/main', 'MainController')->name('product.main');
         Route::post('/create', 'CreateController')->name('product.create');
         Route::post('/add', 'StoreController')->name('product.store');
         Route::post('/id', 'ShowController')->name('product.show');

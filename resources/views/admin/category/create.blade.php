@@ -27,10 +27,10 @@
                             <input type="text" class="form-control" name="user_id" placeholder="Пользователь" value="{{auth()->user()->id}}">
                         </div>
                         <div class="form-group">
-                            <select name="parking" class="form-control">
+                            <select name="parent_id" class="form-control">
+                                <option>Категория</option>
                                 @foreach($categories as $category)
-                                    <option>Категория</option>
-                                    <option value="{{ $category->id}}" {{ $category->title== old('type_id') ? ' selected' : ''}}>
+                                    <option value="{{ $category->id}}" {{ $category->id== old('type_id') ? ' selected' : ''}}>
                                         {{ $category->title}}
                                     </option>
                                 @endforeach

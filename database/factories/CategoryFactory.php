@@ -23,7 +23,7 @@ class CategoryFactory extends Factory
             'Спорт',
             'Животные'
         ];
-        $i = random_int(1,5);
+        $i = random_int(1,4);
             return [
 
                     'user_id' => random_int(1, 4000000),

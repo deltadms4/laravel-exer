@@ -15,7 +15,7 @@ class IndexController extends Controller
     public function __invoke()
         {
             $columns = Schema::getColumnListing('products');
-            //$columns = array_slice($columns, 0, -3);
+            $columns = array_slice($columns, 0, -38);
 
             $categories_count = Category::all()->count();
             $products_count = Product::all()->count();

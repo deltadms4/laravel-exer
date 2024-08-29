@@ -57,50 +57,50 @@
                                         <td>{{$product->category}}</td>
                                         <td>{{$product->title}}</td>
                                         <td>{{$product->price}}</td>
-                                        <td>{{$product->content}}</td>
-                                        <td>{{$product->transaction_type}}</td>
-                                        <td>{{$product->date}}</td>
-                                        <td>{{$product->city}}</td>
-                                        <td>{{$product->address}}</td>
-                                        <td>{{$product->author}}</td>
-                                        <td>{{$product->telephone}}</td>
-                                        <td>{{$product->connection}}</td>
-                                        <td>{{$product->home_type}}</td>
-                                        <td>{{$product->room_count}}</td>
-                                        <td>{{$product->additional_attr}}</td>
-                                        <td>{{$product->totla_square}}</td>
-                                        <td>{{$product->living_square}}</td>
-                                        <td>{{$product->kitcheb_square}}</td>
-                                        <td>{{$product->bathroom}}</td>
-                                        <td>{{$product->repair}}</td>
-                                        <td>{{$product->furniture}}</td>
-                                        <td>{{$product->technique}}</td>
-                                        <td>{{$product->internet_tv}}</td>
-                                        <td>{{$product->material_house}}</td>
-                                        <td>{{$product->year_building}}</td>
-                                        <td>{{$product->count_floors}}</td>
-                                        <td>{{$product->elevator}}</td>
-                                        <td>{{$product->parking}}</td>
-                                        <td>{{$product->maximum_guests}}</td>
-                                        <td>{{$product->possible_children}}</td>
-                                        <td>{{$product->possible_pets}}</td>
-                                        <td>{{$product->possible_smoking}}</td>
-                                        <td>{{$product->communal_services}}</td>
-                                        <td>{{$product->other_services}}</td>
-                                        <td>{{$product->deposit}}</td>
-                                        <td>
-                                            @if(isset($product->image))
-                                        @foreach($product->image as $image)
-                                            <img src="{{'storage/' . $image}}" width="100px" height="50px" alt="">
-                                        @endforeach
-                                            @endif
-                                        </td>
-                                        <td>{{$product->video}}</td>
-                                        <td>{{$product->animation}}</td>
-                                        <td>{{$product->active}}</td>
-                                        <td>{{$product->created_at}}</td>
-                                        <td>{{$product->updated_at}}</td>
-                                        <td>{{$product->deleted_at}}</td>
+{{--                                        <td>{{$product->content}}</td>--}}
+{{--                                        <td>{{$product->transaction_type}}</td>--}}
+{{--                                        <td>{{$product->date}}</td>--}}
+{{--                                        <td>{{$product->city}}</td>--}}
+{{--                                        <td>{{$product->address}}</td>--}}
+{{--                                        <td>{{$product->author}}</td>--}}
+{{--                                        <td>{{$product->telephone}}</td>--}}
+{{--                                        <td>{{$product->connection}}</td>--}}
+{{--                                        <td>{{$product->home_type}}</td>--}}
+{{--                                        <td>{{$product->room_count}}</td>--}}
+{{--                                        <td>{{$product->additional_attr}}</td>--}}
+{{--                                        <td>{{$product->totla_square}}</td>--}}
+{{--                                        <td>{{$product->living_square}}</td>--}}
+{{--                                        <td>{{$product->kitcheb_square}}</td>--}}
+{{--                                        <td>{{$product->bathroom}}</td>--}}
+{{--                                        <td>{{$product->repair}}</td>--}}
+{{--                                        <td>{{$product->furniture}}</td>--}}
+{{--                                        <td>{{$product->technique}}</td>--}}
+{{--                                        <td>{{$product->internet_tv}}</td>--}}
+{{--                                        <td>{{$product->material_house}}</td>--}}
+{{--                                        <td>{{$product->year_building}}</td>--}}
+{{--                                        <td>{{$product->count_floors}}</td>--}}
+{{--                                        <td>{{$product->elevator}}</td>--}}
+{{--                                        <td>{{$product->parking}}</td>--}}
+{{--                                        <td>{{$product->maximum_guests}}</td>--}}
+{{--                                        <td>{{$product->possible_children}}</td>--}}
+{{--                                        <td>{{$product->possible_pets}}</td>--}}
+{{--                                        <td>{{$product->possible_smoking}}</td>--}}
+{{--                                        <td>{{$product->communal_services}}</td>--}}
+{{--                                        <td>{{$product->other_services}}</td>--}}
+{{--                                        <td>{{$product->deposit}}</td>--}}
+{{--                                        <td>--}}
+{{--                                            @if(isset($product->image))--}}
+{{--                                        @foreach($product->image as $image)--}}
+{{--                                            <img src="{{'storage/' . $image}}" width="100px" height="50px" alt="">--}}
+{{--                                        @endforeach--}}
+{{--                                            @endif--}}
+{{--                                        </td>--}}
+{{--                                        <td>{{$product->video}}</td>--}}
+{{--                                        <td>{{$product->animation}}</td>--}}
+{{--                                        <td>{{$product->active}}</td>--}}
+{{--                                        <td>{{$product->created_at}}</td>--}}
+{{--                                        <td>{{$product->updated_at}}</td>--}}
+{{--                                        <td>{{$product->deleted_at}}</td>--}}
                                         <td class="mr-5">
                                             <a href="{{route('admin.product.edit', $product->id)}}" class="text-success"><i class="ml-4 fas fa-pencil-alt"></i></a>
                                             <form action="{{route('admin.product.delete', $product->id)}}" method="POST"  style="margin-top: -23px; margin-left: 65px">

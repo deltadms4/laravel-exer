@@ -29,7 +29,7 @@
                         <div class="form-group">
                             <input type="text" class="form-control mb-2" name="name" placeholder="Имя" value="{{$user->name}}">
                             <input type="text" class="form-control mb-2" name="email" placeholder="Эл. адрес" value="{{$user->email}}">
-                            <input type="text" class="form-control mb-2" name="password" id="password" placeholder="Пароль" value="{{$user->password}}">
+                            <input type="text" class="form-control mb-2" name="password" placeholder="Пароль">
                             <input type="text" class="form-control mb-2" name="role" placeholder="Роль" value="{{$user->role}}">
                         </div>
                         <input type="submit" class="btn btn-primary" value="Редактировать">
@@ -39,5 +39,4 @@
             </div>
         </section>
     </div>
-
 @endsection

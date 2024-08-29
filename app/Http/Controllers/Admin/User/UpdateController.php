@@ -9,7 +9,6 @@ use App\Http\Resources\User\UserResource;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Schema;
 
 class UpdateController extends BaseController

@@ -30,10 +30,24 @@
                         @method('PATCH')
                         <div class="form-group">
                             <input type="text" class="form-control" name="user_id" placeholder="Пользователь" value="{{auth()->user()->id}}" style="display: none;">
-                            <input type="text" class="form-control" name="parent_id" placeholder="Родительская Категория" value="{{$category->parent_id}}">
-                            <input type="text" class="form-control" name="title" placeholder="Название" value="{{$category->title}}">
-                            <input type="text" class="form-control" name="active" placeholder="Активно" value="{{$category->active}}">
 
+                            <div class="form-group">
+                                <select name="parent_id" class="form-control">
+                                    <option>{{$category->title}}</option>
+                                    @foreach($categories as $category)
+                                        <option value="{{ $category->id}}" {{ $category->id== old('type_id') ? ' selected' : ''}}>
+                                            {{ $category->title}}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="title" placeholder="Название" value="{{$category->title}}">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="active" placeholder="Активно" value="{{$category->active}}">
+                            </div>
                         </div>
                         <input type="submit" class="btn btn-primary" value="Редактировать">
                     </form>

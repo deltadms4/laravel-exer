@@ -15,7 +15,10 @@ class IndexController extends Controller
             $data = $request->input();
             $products = Product::paginate($data['int']);
 
+
+
             //return ProductResource::collection($products);
+
             return $products;
         }
 }
